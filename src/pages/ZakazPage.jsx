@@ -72,19 +72,24 @@ const ZakazPage = () => {
         <div className="flex flex-col">
         <h1 className=' border-b-[1px] w-screen text-[24px] leading-8 font-semibold py-[11.5px] pl-[32px] border-[#DCE9F9]'>Заказы</h1>
         <div className="bg-[#DCE9F9] ">
-        <div className="bg-[#DCE9F9]  px-5 py-5 h-full">
-        <div className='px-5 w-[1400px] pt-5 bg-white h-[550px] rounded-[6px] '>
+        <div className="bg-[#DCE9F9] h-[645px] px-5 py-5 ">
+        <div className='px-5 w-[1400px] pt-5 bg-white h-[600px] rounded-[6px] '>
         { <Box> <DataGrid
         getRowHeight={() => 'auto'}
        
             slots={{
                 toolbar: GridToolbar,
             }}
+            slotProps={{
+                toolbar: {
+                  showQuickFilter: true,
+                },
+              }}
             rows={rows}
             columns={columns}
             initialState={{
                 pagination: {
-                    paginationModel: { page: 0, pageSize: 6 },
+                    paginationModel: { page: 0, pageSize: 7 },
                 },
             }}
             checkboxSelection

@@ -93,11 +93,11 @@ const MarketingPage = () => {
       <span className="text-[14px] leading-6">Столбцы</span>
       </li>
       </ul> */}
-      <div className={`absolute ${!downTable?'hidden':''} top-full right-0 w-[200px] bg-white`}>
+      {/* <div className={`absolute ${!downTable?'hidden':''} top-full right-0 w-[200px] bg-white`}>
       <ul>
       <li className='cursor-pointer' onClick={()=>setHasNaznazvanie(!hasNazvanie)} >Название {hasNazvanie?'On':'Off'}</li>
       </ul>
-      </div>
+      </div> */}
       </div>
       
       <div className="bg-[#DCE9F9]  px-5 py-5 h-full">
@@ -105,6 +105,11 @@ const MarketingPage = () => {
       { <Box> <DataGrid
        slots={{
         toolbar: GridToolbar,
+      }}
+      slotProps={{
+        toolbar: {
+          showQuickFilter: true,
+        },
       }}
       rows={rows}
       columns={columns}
