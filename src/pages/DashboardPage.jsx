@@ -38,7 +38,7 @@ const DashboardPage = () => {
     <Stack sx={{ width: '100%' }}>
     <LineChart
     xAxis={[{ data: ['1', '2', '3', '4', '5', '6', '7','8'], scaleType: 'point' }]}
-    series={[{ data:[100, 300, 150, 400, 200, 700, 500,1000], showMark: false, area: true, color:['#F8C900'], connectNulls: true }]}
+    series={[{ data:[100, 300, 150, 400, 200, 700, 500,1000], showMark: false, area: true, color:'#F8C900', connectNulls: true }]}
     height={105}
     width={230}
     leftAxis={null}
@@ -60,7 +60,7 @@ const DashboardPage = () => {
     <Stack sx={{ width: '100%' }}>
     <LineChart
     xAxis={[{ data: ['1', '2', '3', '4', '5', '6', '7','8'], scaleType: 'point' }]}
-    series={[{ data:[100, 300, 150, 400, 200, 700, 500,1000], showMark: false, area: true, color:['#A30Fee'], connectNulls: true }]}
+    series={[{ data:[100, 300, 150, 400, 200, 700, 500,1000], showMark: false, area: true, color:'#A30Fee', connectNulls: true }]}
     height={105}
     width={230}
     leftAxis={null}
@@ -82,7 +82,7 @@ const DashboardPage = () => {
       <Stack sx={{ width: '100%' }}>
       <LineChart
       xAxis={[{ data: ['1', '2', '3', '4', '5', '6', '7','8'], scaleType: 'point' }]}
-      series={[{ data:[100, 300, 150, 400, 200, 700, 500,1000], showMark: false, area: true, color:['#F77771'], connectNulls: true }]}
+      series={[{ data:[100, 300, 150, 400, 200, 700, 500,1000], showMark: false, area: true, color:'#F77771', connectNulls: true }]}
       height={105}
       width={230}
       leftAxis={null}
@@ -146,8 +146,8 @@ const DashboardPage = () => {
 <div className="w-[846px] bg-white rounded-[6px]">
   <div className="flex w-full px-5 py-4 items-center justify-between">
     <h3 className='text-[18px] leading-6 font-semibold text-[#5B6871]'>Ежемесячная статистика</h3>
-    <select className='outline-none px-4 py-2 w-[160px] h-[40px] border-[1px] border-[#E5E9EB] rounded-lg'>
-      <option selected value="iyun">Июнь</option>
+    <select defaultValue={'iyun'} className='outline-none px-4 py-2 w-[160px] h-[40px] border-[1px] border-[#E5E9EB] rounded-lg'>
+      <option  value="iyun">Июнь</option>
     </select>
   </div>
   <Stack sx={{ width: '100%' }} className='mb-2'>

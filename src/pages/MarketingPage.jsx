@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { DataGrid,GridToolbar } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
-import { RxTable } from "react-icons/rx";
 import Navbar from '../components/Navbar'
 import image from './../assets/img/bannerImage.png'
 
@@ -58,9 +57,7 @@ const MarketingPage = () => {
       
     ];
     
-
-  
-    const rows = [
+      const rows = [
       { id: rowFunctionCall('Vulputate velit lacus, enim viverra quis.','😉 Курьер молодец'), lastName: tableFunctionCall('10.06.2021','Баннер 1',null), firstName:tableFunctionCall('10.06.2021','Баннер 1','👍'), age:'Активный' },
       { id: rowFunctionCall('Eget vulputate iaculis aliquam vel nulla tristique nec.','⚡️ Быстрая доставка		'), lastName: tableFunctionCall('10.06.2021','Баннер 1',null), firstName: tableFunctionCall('10.06.2021','Баннер 1','👍'), age: 'Активный' },
       { id: rowFunctionCall('Et sed eu volutpat tincidunt.','😋 Вкусная еда		'),lastName:tableFunctionCall('10.06.2021','Баннер 1',null), firstName: tableFunctionCall('10.06.2021','Баннер 1','👍'), age: 'Активный' },

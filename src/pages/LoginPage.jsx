@@ -17,11 +17,12 @@ const LoginPage = () => {
       name,
       code,
     }
-    console.log(name.length>3 && code.length>6);
+    
     
     if(name.length>3 && code.length>=6){
       localStorage.setItem('userInfo',JSON.stringify(userInfo))
       navigate('/')
+      return
     }else{
       console.log('dcvsd');
       
@@ -44,7 +45,7 @@ const LoginPage = () => {
       #48535B] font-semibold mb-[8px]'>Имя пользователья<span className='text-red-500'> *</span></h4>
       <div className="flex px-[12px] mb-4 border-[#6E8BB74D] border-[1px] border-solid rounded-[8px] items-center w-full h-[48px]">
       <label htmlFor="name"><VscAccount className='w-6 h-6 mr-3 text-gray-500' /></label>
-      <input type="text" id='name' name='name' className='h-full text-[14px] leading-6 focus:outline-none flex-grow' placeholder='Арина Соколова' /></div>
+      <input type="text" autoComplete={'additional-name'} id='name' name='name' className='h-full text-[14px] leading-6 focus:outline-none flex-grow' placeholder='Арина Соколова' /></div>
       
       <h4 className='text-[16px] text-[
         #48535B] font-semibold mb-[8px]'>Пароль<span className='text-red-500'> *</span></h4>
