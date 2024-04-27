@@ -30,7 +30,11 @@ const ZakazPage = () => {
         }
         , headerName: 'Клиент', width:224 },
         { field: 'Ид_заказа', headerName: 'Ид.заказа', width:104,headerAlign: 'center' },
-        {field: 'Таймер',headerName: 'Таймер',width: 120,},
+        {field: 'Таймер', renderCell:(cellValue)=>{
+        return (
+           <div className="h-full flex items-center justify-center"> <div className="py-1  px-[13px] bg-[#38d9b933] rounded-[6px] text-[#1AC19D] flex items-center justify-center">{cellValue.value}</div></div>
+            )
+        },headerName: 'Таймер',width: 120,align:'center'},
         {field: 'Курьер',headerName: 'Курьер',width: 88,},
         {field: 'Филиал',headerName: 'Филиал',width: 224, renderCell:(cellValues)=>{
             return(
@@ -40,7 +44,11 @@ const ZakazPage = () => {
                 </div>
                 )
             }},
-    {field: 'Тип_доставки',headerName: 'Тип_доставки',width: 136,},
+    {field: 'Тип_доставки',renderCell:(cellValue)=>{
+        return (
+            <div className="h-full flex items-center justify-center"><div className="py-1  px-[13px] bg-[#f8dd4e4d] rounded-[6px] text-[#D29404] flex items-center justify-center">{cellValue.value}</div></div>
+            )
+        },headerName: 'Тип_доставки',width: 136,},
     {field: 'Цена_заказа',headerName: 'Цена_заказа',width: 128,},
     {field: 'Адресс',headerName: 'Адресс',width: 150,},
     ];
@@ -68,6 +76,7 @@ const ZakazPage = () => {
         <div className='px-5 w-[1400px] pt-5 bg-white h-[550px] rounded-[6px] '>
         { <Box> <DataGrid
         getRowHeight={() => 'auto'}
+       
             slots={{
                 toolbar: GridToolbar,
             }}
@@ -75,7 +84,7 @@ const ZakazPage = () => {
             columns={columns}
             initialState={{
                 pagination: {
-                    paginationModel: { page: 0, pageSize: 5 },
+                    paginationModel: { page: 0, pageSize: 6 },
                 },
             }}
             checkboxSelection
